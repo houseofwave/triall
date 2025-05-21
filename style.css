@@ -1,0 +1,578 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  background:
+    linear-gradient(rgba(0,0,0,0.18), rgba(0,0,0,0.38)),
+    url('https://images.pexels.com/photos/2233366/pexels-photo-2233366.jpeg') no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll; /* Scrolls with the page, no tearing */
+  overflow-y: auto;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 50%; /* Makes it circular, optional */
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3); /* Neon pink shadow, optional */
+}
+
+.hero {
+  text-align: center;
+  padding: 70px 20px 40px 20px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  margin: 40px auto 30px auto;
+  max-width: 700px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 0 24px #ff69b4, 0 0 40px #fff;
+}
+
+.tagline {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  margin: 10px 0 0 0;
+  color: #fff;
+  text-shadow: 0 0 10px #ff69b4, 0 0 20px #fff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+.form-section {
+  background: rgba(255, 255, 255, 0.1); /* Transparent form background */
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(255, 105, 180, 0.5); /* Neon pink shadow */
+}
+
+input, button {
+  width: 90%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%) !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 12px rgba(255, 23, 68, 0.18);
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #b71c1c 0%, #ff1744 100%) !important;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%) !important;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 12px rgba(255, 23, 68, 0.18);
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #b71c1c 0%, #ff1744 100%) !important;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.btn.insta {
+  background: #e1306c; /* Instagram pink */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.btn.insta:hover {
+  background: #c13584; /* Darker Instagram pink */
+}
+
+.btn.whatsapp {
+  background: #25d366;
+}
+
+.gallery {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(255, 105, 180, 0.12);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.gallery h2 {
+  color: #ff1744 !important;
+  margin-bottom: 20px;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gallery-images img {
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(255, 105, 180, 0.5); /* Neon pink shadow */
+}
+
+.venue {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(255, 105, 180, 0.12);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.venue h2 {
+  color: #ff1744 !important;
+  margin-bottom: 10px;
+}
+
+.contact {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(255, 105, 180, 0.12);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.contact h2 {
+  color: #ff1744 !important;
+  margin-bottom: 10px;
+}
+
+.invitation {
+  background: rgba(0,0,0,0.35);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(255, 105, 180, 0.10);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.10);
+  max-width: 500px;
+  margin: 40px auto 60px auto;
+  padding: 40px 30px 30px 30px;
+  text-align: center;
+}
+
+.invitation h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.1rem;
+  color: #fff;
+  margin-bottom: 18px;
+}
+
+.invitation-desc {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+form#inviteForm input {
+  width: 90%;
+  max-width: 400px;
+  margin: 12px auto;
+  padding: 14px;
+  font-size: 1.08rem;
+  border-radius: 7px;
+  border: none;
+  background: rgba(255,255,255,0.13);
+  color: #fff;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+}
+
+form#inviteForm input::placeholder {
+  color: #eee;
+  opacity: 1;
+}
+
+form#inviteForm button {
+  background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%) !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-size: 1.15rem;
+  font-weight: bold;
+  box-shadow: 0 2px 12px rgba(255, 23, 68, 0.18);
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+form#inviteForm button:hover {
+  background: linear-gradient(90deg, #b71c1c 0%, #ff1744 100%) !important;
+  transform: translateY(-2px) scale(1.04);
+}
+
+#confirmation {
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.pricing, .rooms {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(255, 105, 180, 0.12);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.pricing h2, .rooms h2 {
+  color: #ff1744 !important;
+  margin-bottom: 10px;
+}
+
+.pricing ul {
+  list-style: none;
+  padding: 0;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.pricing ul li {
+  margin: 10px 0;
+}
+
+.pricing ul li button {
+  margin-left: 10px;
+  background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%) !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 12px rgba(255, 23, 68, 0.18);
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.pricing ul li button:hover {
+  background: linear-gradient(90deg, #b71c1c 0%, #ff1744 100%) !important;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.rooms ul {
+  list-style: none;
+  padding: 0;
+  color: #fff;
+}
+
+.rooms ul li {
+  margin: 10px 0;
+}
+
+.rooms ul li strong {
+  color: #ff1744 !important; /* Highlighted text */
+}
+
+.payment, .confirmation {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(255, 105, 180, 0.12);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.payment h2, .confirmation h2 {
+  color: #ff1744 !important;
+  margin-bottom: 10px;
+}
+
+.payment form input, .payment form button {
+  width: 90%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.payment form button {
+  background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%) !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 12px rgba(255, 23, 68, 0.18);
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.payment form button:hover {
+  background: linear-gradient(90deg, #b71c1c 0%, #ff1744 100%) !important;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.quantity {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.55);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(255, 105, 180, 0.12);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.quantity h2 {
+  color: #ff1744 !important;
+  margin-bottom: 10px;
+}
+
+.quantity-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.quantity-selector button {
+  background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%) !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 12px rgba(255, 23, 68, 0.18);
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.quantity-selector button:hover {
+  background: linear-gradient(90deg, #b71c1c 0%, #ff1744 100%) !important;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.quantity-selector span {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.centered-content {
+  max-width: 420px;
+  margin: 8vh auto 0 auto;
+  padding: 48px 32px 40px 32px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+  backdrop-filter: blur(8px);
+  text-align: center;
+}
+
+.luxury-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-bottom: 0.2em;
+  font-weight: 700;
+}
+
+.luxury-subheading {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1.2em;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+.luxury-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%) !important;
+  margin: 0 auto 1.5em auto;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+.luxury-desc {
+  font-size: 1.08rem;
+  color: #fff;
+  opacity: 0.93;
+  margin-bottom: 2em;
+  line-height: 1.6;
+}
+
+.luxury-form input {
+  width: 100%;
+  margin: 14px 0;
+  padding: 14px 16px;
+  font-size: 1.08rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255,255,255,0.13);
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  outline: none;
+  transition: background 0.2s;
+}
+
+.luxury-form input:focus {
+  background: rgba(255,255,255,0.18);
+}
+
+.luxury-form input::placeholder {
+  color: #eee;
+  opacity: 1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.luxury-form button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 15px 0;
+  font-size: 1.15rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff1744 0%, #b71c1c 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 12px rgba(255, 23, 68, 0.18);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.luxury-form button:hover {
+  background: linear-gradient(90deg, #b71c1c 0%, #ff1744 100%) !important;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.luxury-confirmation {
+  margin-top: 2em;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  padding: 24px 0 10px 0;
+  background: transparent;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* ----------- MOBILE FRIENDLY CSS BELOW ----------- */
+@media (max-width: 600px) {
+  .centered-content {
+    padding: 20px 8px 20px 8px;
+    max-width: 98vw;
+  }
+  .luxury-heading {
+    font-size: 2rem;
+  }
+  .luxury-subheading {
+    font-size: 1rem;
+  }
+  .luxury-form input,
+  .luxury-form button {
+    font-size: 1rem;
+    padding: 12px 8px;
+  }
+  .luxury-desc {
+    font-size: 0.98rem;
+  }
+  form#inviteForm input,
+  form#inviteForm button {
+    max-width: 98vw;
+    font-size: 1rem;
+  }
+  body {
+    padding: 0 2vw;
+  }
+  .gallery-images img {
+    width: 98vw;
+    max-width: 320px;
+    margin: 0 auto 12px auto;
+  }
+  .hero {
+    padding: 30px 8px 20px 8px;
+    margin: 20px auto 10px auto;
+    max-width: 98vw;
+  }
+  .form-section, .invitation, .venue, .contact, .pricing, .rooms, .payment, .confirmation, .quantity {
+    padding: 16px 4px;
+    max-width: 98vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
