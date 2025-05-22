@@ -1,18 +1,17 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Social Sharing Metadata -->
-<meta property="og:title" content="House of Wave" />
-<meta property="og:description" content="Request your exclusive invitation to the most premium pool party experience." />
-<meta property="og:image" content="https://images.pexels.com/photos/2233366/pexels-photo-2233366.jpeg" />
-<meta property="og:url" content="https://houseofwave.github.io/meowmoew/" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="House of Wave" />
-<meta name="twitter:description" content="Request your exclusive invitation to the most premium pool party experience." />
-<meta name="twitter:image" content="https://images.pexels.com/photos/2233366/pexels-photo-2233366.jpeg" />
+  <meta property="og:title" content="House of Wave" />
+  <meta property="og:description" content="Request your exclusive invitation to the most premium pool party experience." />
+  <meta property="og:image" content="https://images.pexels.com/photos/2233366/pexels-photo-2233366.jpeg" />
+  <meta property="og:url" content="https://houseofwave.github.io/meowmoew/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="House of Wave" />
+  <meta name="twitter:description" content="Request your exclusive invitation to the most premium pool party experience." />
+  <meta name="twitter:image" content="https://images.pexels.com/photos/2233366/pexels-photo-2233366.jpeg" />
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>House of Wave</title>
@@ -29,24 +28,36 @@
         Kindly enter your details to request an invitation to the most exclusive pool party of the season.<br>
         Our team will review your request and contact you with further details.
       </p>
-      <form id="inviteForm" class="luxury-form" <form action="https://formsubmit.co/officiahouseofwave@gmail.com" method="POST" />
+
+      <!-- ✅ Corrected Form -->
+      <form id="inviteForm" class="luxury-form" action="https://formsubmit.co/officialhouseofwave@gmail.com" method="POST">
         <input type="text" name="name" placeholder="Full Name" required>
         <input type="tel" name="mobile" placeholder="Mobile Number" required>
         <input type="email" name="email" placeholder="Email Address" required>
         <input type="text" name="instagram" placeholder="Instagram Handle" required>
+
+        <!-- Optional Hidden Fields -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Optional: replace with your own thank-you page if you have one -->
+        <!-- <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> -->
+
         <button type="submit">Request Invitation</button>
       </form>
+
+      <!-- Thank You Message (shown after JS submission) -->
       <div id="thankyouMessage" class="luxury-desc hidden" style="margin-top:2em;">
         <h2 style="font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:0.5em;">Thank You</h2>
         <p>Your form is under review and we will reach out to you shortly.</p>
       </div>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 House of Wave. All rights reserved.</p>
   </footer>
+
+  <!-- JS to Handle Inline Thank You Message -->
   <script>
-    // Show thank you message after successful submission (no redirect)
     window.addEventListener("DOMContentLoaded", function() {
       const form = document.getElementById('inviteForm');
       const thankyou = document.getElementById('thankyouMessage');
